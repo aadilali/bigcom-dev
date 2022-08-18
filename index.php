@@ -25,8 +25,7 @@ $err = curl_error($curl);
 curl_close($curl);
 
 if ($err) {
-  //echo json_encode( array("status" => "failed", "res" => "cURL Error #:" . $err) );
+  echo json_encode( array("status" => "failed", "res" => "cURL Error #:" . $err) );
 } else {
-  echo $response;
-   //echo json_encode( array("status" => "success", "res" => $response) );
+   echo json_encode( array("status" => "success", "res" => $response) );
 }
