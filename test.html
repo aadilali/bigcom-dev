@@ -13,6 +13,11 @@ xhr.withCredentials = true;
 xhr.addEventListener("readystatechange", function () {
   if (this.readyState === this.DONE) {
     console.log(this.responseText);
+    var data = JSON.parse(this.responseText);
+    console.log("daata ", data);
+    if(data.status == 'success') {
+        console.log('sdasd ', data.res);
+    }
   }
 });
 
