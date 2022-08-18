@@ -20,7 +20,7 @@ fetch("https://bigcom-dev-api.herokuapp.com", {
 .then(data => {
   console.log('data', data);
 
-  console.log('data 2', JSON.parse(data));
+  console.log('data 2', JSON.parse(data.res));
 })
 .catch(err => {
   console.error(err);
