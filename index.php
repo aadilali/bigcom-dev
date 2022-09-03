@@ -26,7 +26,6 @@ curl_setopt_array($curl, [
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
-curl_close($curl);
 
 if ($err) {
   echo json_encode( array("status" => "failed", "res" => "cURL Error #:" . $err) );
@@ -46,4 +45,18 @@ if ($err) {
       "X-Auth-Token: cfxi39as2eounkznn21w3q3z1nkfwgr"
     ],
   ]);
+
+  $response = curl_exec($curl);
+  $err = curl_error($curl);
+
+
+  if ($err) {
+    echo json_encode( array("status" => "failed", "res" => "cURL Error #:" . $err) );
+  } else {
+     echo json_encode( array("status" => "success", "res" => $response) );
+  }
 }
+
+curl_close($curl);
+
+
