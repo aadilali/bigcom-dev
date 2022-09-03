@@ -30,8 +30,8 @@ $err = curl_error($curl);
 if ($err) {
   echo json_encode( array("status" => "failed", "res" => "cURL Error #:" . $err) );
 } else {
-   echo json_encode( array("status" => "success", "res" => $response) );
-print_r($response);
+   //echo json_encode( array("status" => "success", "res" => $response) );
+print_r($json_decode($response));
    curl_setopt_array($curl, [
     CURLOPT_URL => "https://api.bigcommerce.com/stores/cxahscodbs/v2/customers/".$response->customer_id,
     CURLOPT_RETURNTRANSFER => true,
