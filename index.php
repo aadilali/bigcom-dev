@@ -32,7 +32,7 @@ if ($err) {
 } else {
    echo json_encode( array("status" => "success", "res" => $response) );
    curl_setopt_array($curl, [
-    CURLOPT_URL => "https://api.bigcommerce.com/stores/cxahscodbs/v2/customers/".$response->customerId,
+    CURLOPT_URL => "https://api.bigcommerce.com/stores/cxahscodbs/v2/customers/".$response->customer_id,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
