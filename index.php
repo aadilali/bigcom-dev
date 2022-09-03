@@ -9,7 +9,7 @@ header("Access-Control-Allow-Methods: PUT, POST, GET, OPTIONS, DELETE");
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-  CURLOPT_URL => "https://api.bigcommerce.com/api/storefront/orders/" . $_GET['oid'],
+  CURLOPT_URL => "https://api.bigcommerce.com/stores/cxahscodbs/v2/orders/" . $_GET['oid'],
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
